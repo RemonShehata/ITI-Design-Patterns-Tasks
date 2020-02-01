@@ -9,14 +9,7 @@ package decorator;
  *
  * @author remon
  */
-public class Sandwich {
-    
-     public String getDescription() {
-        return "Empty Sandwich";
-    }
-
-    public float cost() {
-        return 5f;
-    }
+public  abstract class Extras extends Sandwich{
+   
     
 }

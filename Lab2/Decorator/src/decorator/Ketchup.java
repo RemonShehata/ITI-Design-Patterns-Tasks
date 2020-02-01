@@ -9,15 +9,22 @@ package decorator;
  *
  * @author remon
  */
-public class ChickenSandwichWithCheese extends ChickenSandwich {
+public class Ketchup extends Extras {
+
+    Sandwich sandwich;
+
+    public Ketchup(Sandwich sandwich) {
+        this.sandwich = sandwich;
+    }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + " with Cheese";
+        return sandwich.getDescription() + " with Ketchup";
     }
 
     @Override
     public float cost() {
-        return 2f + super.cost();
+        return 2f + sandwich.cost();
     }
+
 }

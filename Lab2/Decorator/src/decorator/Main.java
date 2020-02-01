@@ -16,7 +16,11 @@ public class Main {
      */
     public static void main(String[] args) {
         //Sandwich sandwich = new ChickenSandwichWithCheese();
-        Sandwich sandwich = new ChickenSandwichWithCheeseAndKetchup();
+        //Sandwich sandwich = new ChickenSandwichWithCheeseAndKetchup();
+        Sandwich sandwich = new Sandwich();
+        sandwich = new ChickenSandwich(sandwich);
+        sandwich = new Ketchup(sandwich);
+        sandwich = new Cheese(sandwich);
         System.out.println(sandwich.getDescription());
         System.out.println(sandwich.cost());
     }

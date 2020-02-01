@@ -9,28 +9,21 @@ package decorator;
  *
  * @author remon
  */
-public class ChickenSandwich extends Sandwich {
+public class Mashroom extends Extras {
 
     Sandwich sandwich;
 
-    public ChickenSandwich(Sandwich sandwich) {
+    public Mashroom(Sandwich sandwich) {
         this.sandwich = sandwich;
-    }
-
-    public ChickenSandwich() {
-        if (sandwich == null) {
-               this.sandwich = new Sandwich();
-        }
     }
 
     @Override
     public String getDescription() {
-        return super.getDescription() + " with Chicken";
+        return sandwich.getDescription() + " with Mashroom";
     }
 
     @Override
     public float cost() {
-        return 5f + super.cost();
+        return 3f + sandwich.cost();
     }
-
 }
