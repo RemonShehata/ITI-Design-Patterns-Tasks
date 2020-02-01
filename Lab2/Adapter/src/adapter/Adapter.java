@@ -9,26 +9,7 @@ package adapter;
  *
  * @author remon
  */
-public class Adapter {
+public abstract class Adapter {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        ViewService viewService = new ViewService();
-        UserDTO user = viewService.getUser();
-
-        UserEntity userEntity = new UserEntity();
-        userEntity.setId(user.getId());
-        userEntity.setFullName(user.getFirstName() + " " + user.getMiddleName()
-                + " " + user.getLastName());
-        userEntity.setNetSalary(user.getSalary() + user.getBonus() - user.getDeduction());
-
-        PersistService persistService = new PersistService();
-        persistService.persist(userEntity);
-
-        PrintService printService = new PrintService();
-        printService.print(userEntity);
-    }
-    
+    public abstract UserEntity adapt(UserDTO udto);
 }
