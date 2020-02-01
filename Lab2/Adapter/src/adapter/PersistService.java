@@ -9,9 +9,9 @@ package adapter;
  *
  * @author remon
  */
-public class PersistService {
+public class PersistService implements Service{
 
-    public void persist(UserEntity user) {
+    public void doService(UserEntity user) {
         System.out.println("===========================");
         System.out.println("Persist Service");
         System.out.println(user.getFullName());

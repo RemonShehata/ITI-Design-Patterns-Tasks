@@ -10,7 +10,6 @@ package adapter;
  * @author remon
  */
 public class UserEntity {
-
     private int id;
     private String fullName;
     private float netSalary;

@@ -9,8 +9,8 @@ package adapter;
  *
  * @author remon
  */
-public class PrintService {
-    public void print(UserEntity user) {
+public class PrintService implements Service{
+    public void doService(UserEntity user) {
         System.out.println("===========================");
         System.out.println("Print Service");
         System.out.println(user.getFullName());

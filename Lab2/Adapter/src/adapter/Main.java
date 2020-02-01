@@ -18,14 +18,20 @@ public class Main {
         ViewService viewService = new ViewService();
         UserDTO user = viewService.getUser();
 
-        Adapter adapter = new PresistAdapter();
-        UserEntity userEntity = adapter.adapt(user);
-        PersistService persistService = new PersistService();
-        persistService.persist(userEntity);
-
-        adapter = new PrintAdapter();
-        PrintService printService = new PrintService();
-        printService.print(userEntity);
+//        Adapter adapter = new PresistAdapter();
+//        UserEntity userEntity = adapter.adapt(user);
+//        PersistService persistService = new PersistService();
+//        persistService.persist(userEntity);
+//
+//        adapter = new PrintAdapter();
+//        PrintService printService = new PrintService();
+//        printService.print(userEntity);
+        
+        IFacade facade = new PresistFacade();
+        facade.doAction(user);
+        
+        facade = new PresistFacade();
+        facade.doAction(user);
     }
 
 }
